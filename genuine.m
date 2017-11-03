@@ -6,7 +6,7 @@ clear();
 
 %Load the two matrix variables. 
 %   -matrix2200names.mat
-%   -matrix4000names.mat
+%   -matrix4000names.mat (matrix)
 
 load('matrix2200names.mat');
 load('matrix4000names.mat');
