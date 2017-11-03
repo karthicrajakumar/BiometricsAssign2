@@ -1,0 +1,13 @@
+
+sortedarray=sort(garray);
+threshold=0.35;
+CMCarray=[];
+for i=1:20
+    compare=sortedarray(i);
+    for k=1:19339
+      if compare<=iarray(i);
+    end
+
+
+
+end

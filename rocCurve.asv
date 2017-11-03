@@ -1,0 +1,35 @@
+%Vary the threshold value
+%each separate thresold value calculate 
+    %the fmr and fnmr
+%plot the graph
+
+totalFalseIdentity = length(iarray);
+totalTrueIdentity = length(garray);
+count=0
+icount = 0;
+gcount = 0;
+fmr = [];
+fnmr = [];
+t=0:.01:1;
+for i=0:length(t)
+    count = count + 0.01;
+    fprintf('count value is %d\n', count);
+    for j=1:totalFalseIdentity
+        if iarray(1,j) <= count
+            icount = icount + 1;
+        end
+    end
+    for j=1:totalTrueIdentity
+        if garray(1,j) <= count
+            gcount = gcount + 1;
+        end
+    end
+    fmrcalc = icount/totalFalseIdentity;
+    fnmrcalc = gcount/totalTrueIdentity;
+    icount=0;
+    gcount=0;
+    fmr = [fmr, fmrcalc];
+    fnmr = [fnmr, fnmrcalc];
+end
+
+plot(fmr,fnmr);
